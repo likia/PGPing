@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRe-sB-tg6" customClass="BCTextField">
+                                <rect key="frame" x="34" y="40" width="225" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKZ-e1-Hav" customClass="BCButton">
+                                <rect key="frame" x="278" y="33" width="81" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="K9s-UE-gHh"/>
+                                    <constraint firstAttribute="width" constant="81" id="b3h-jg-qNg"/>
+                                </constraints>
+                                <state key="normal" title="Ping">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="k0N-pb-zMu">
+                                <rect key="frame" x="34" y="78" width="225" height="569"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k0N-pb-zMu" firstAttribute="width" secondItem="wRe-sB-tg6" secondAttribute="width" id="1X0-uC-xm4"/>
+                            <constraint firstItem="QKZ-e1-Hav" firstAttribute="leading" secondItem="wRe-sB-tg6" secondAttribute="trailing" constant="19" id="2l0-AK-W8K"/>
+                            <constraint firstItem="QKZ-e1-Hav" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="6rv-Xe-mgv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wRe-sB-tg6" secondAttribute="trailing" constant="100" id="Bye-DU-7uC"/>
+                            <constraint firstItem="k0N-pb-zMu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="S6w-qa-v3M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k0N-pb-zMu" secondAttribute="bottom" constant="20" id="THH-Fe-GUe"/>
+                            <constraint firstItem="wRe-sB-tg6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="XvC-Kk-Bgy"/>
+                            <constraint firstItem="k0N-pb-zMu" firstAttribute="top" secondItem="wRe-sB-tg6" secondAttribute="bottom" constant="8" id="dLB-SE-UhL"/>
+                            <constraint firstItem="wRe-sB-tg6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="vHd-Gq-s9f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn" destination="QKZ-e1-Hav" id="8U3-ov-glu"/>
+                        <outlet property="lbResult" destination="k0N-pb-zMu" id="nQI-Ce-DDe"/>
+                        <outlet property="txb" destination="wRe-sB-tg6" id="f9f-GM-EMr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="297"/>
+        </scene>
+    </scenes>
+</document>
